@@ -36,7 +36,7 @@ function Modal({ type }) {
             setAddClient({ code: null, Prénom: "", Nom: "", type: "Entreprise", NomEntreprise: "", adresse: "" })
           }
         }).catch(() => {
-          sweetAlertFunc("Le code email doit être unique !")
+          sweetAlertFunc("Le code  doit être unique !")
         })
       } else {
         sweetAlertFunc('Il faut remplir tous les champs!')
@@ -91,7 +91,7 @@ function Modal({ type }) {
           setAddClient({ code: null, Prénom: "", Nom: "", type: "Entreprise", NomEntreprise: "", adresse: "" })
         }
       }).catch(() => {
-        sweetAlertFunc("Le code email doit être unique !")
+        sweetAlertFunc("Une erreur s'est produite veuillez réessayer !")
       })
 
     } else if (type === "Produit" && itemTomodify.id) {
