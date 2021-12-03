@@ -53,7 +53,7 @@ const Sidebar = () => {
 						})}
 						<hr className="my-6" />
 						<ALink
-							href="/"
+							href="/utilisateurs"
 							className="flex items-center px-4 py-2 mt-5 rounded-md text-gray-600 hover:text-gray-700 hover:bg-gray-200 transition-colors transform"
 						>
 							<FaUserFriends className="w-5 h-5" />

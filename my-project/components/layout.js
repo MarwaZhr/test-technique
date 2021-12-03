@@ -42,8 +42,8 @@ const Layout = ({ children }) => {
     <>
     <div>
     <Header />
-      {children}
     <Sidebar/>
+      {children}
     </div>
     
           

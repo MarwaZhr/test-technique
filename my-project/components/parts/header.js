@@ -1,5 +1,6 @@
 import React from "react";
 import { useGlobalContext } from '../../utils/context';
+import ALink from "../features/alink";
 
 
 
@@ -27,19 +28,14 @@ const Header = () => {
                     id="example-navbar-danger">
                     <ul className="flex flex-col lg:flex-row list-none ml-auto">
                         <li className="nav-item">
-                            <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">
-                                Discover
-                            </a>
+                            <ALink className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="/utilisateurs">
+                                Gestion des utilisateurs
+                            </ALink>
                         </li>
                         <li className="nav-item">
-                            <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">
-                                Profile
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">
-                                Setting
-                            </a>
+                            <ALink className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="/">
+                             Déconnexion
+                            </ALink>
                         </li>
                     </ul>
                 </div>

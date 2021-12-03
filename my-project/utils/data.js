@@ -12,19 +12,19 @@ export const links = [
     },
     {
         id: 2,
-        url: '/',
+        url: '/client',
         text: 'Gestion clients ',
         icon: <BsFileEarmarkPersonFill className="w-5 h-5" />,
     },
     {
         id: 3,
-        url: '/navbar',
+        url: '/produit',
         text: 'Gestion produits',
         icon: <AiFillShop className="w-5 h-5" />,
     },
     {
         id: 4,
-        url: '/navbar',
+        url: '/',
         text: 'Bon de commande',
         icon: <HiTicket className="w-5 h-5" />,
     }

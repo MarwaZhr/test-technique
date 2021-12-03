@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -7,6 +6,9 @@ export default function Home() {
         <title>Fournisseur.TN</title>
         <link rel="icon" href="/images/logo.ico" />
       </Head>
+      <main>
+        <h1>hi</h1>
+      </main>
     </div>
   )
 }
