@@ -44,6 +44,22 @@ const updateProductList = (id, obj) => {
    
     return db.queryAsync(`UPDATE products SET ? WHERE id=${id}`, [obj])
 }
+
+//delete from user
+const deleteUser = (id, obj) => {
+   
+    return db.queryAsync(`DELETE FROM users WHERE userID = ${id}`)
+}
+//delete from client
+const deleteClient = (id, obj) => {
+   
+    return db.queryAsync(`DELETE FROM clients WHERE clientID = ${id}`)
+}
+//delete from product
+const deleteProduct = (id, obj) => {
+   
+    return db.queryAsync(`DELETE FROM products WHERE id = ${id}`)
+}
 module.exports = {
     addNewProduct,
     addNewUser,
@@ -53,5 +69,8 @@ module.exports = {
     listClient,
     updateClientList,
     updateProductList,
-    updateUserList
+    updateUserList,
+    deleteUser,
+    deleteClient,
+    deleteProduct
 }

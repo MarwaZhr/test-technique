@@ -1,4 +1,4 @@
-const { addNewProduct, addNewUser, addNewClient, listClient, listUser, listProduct, updateClientList, updateUserList,updateProductList } = require('../queries/query')
+const { addNewProduct, addNewUser, addNewClient, listClient, listUser, listProduct, updateClientList, updateUserList,updateProductList,deleteProduct,deleteClient,deleteUser } = require('../queries/query')
 
 //This function is used to add the product, the user or the client
 const handleAddFunction = (req, res) => {
@@ -64,9 +64,29 @@ const updateList = (req, res) => {
 
 }
 
+//used to delete user, product or client
+ 
+const deleteItem = (req, res) => {
+    const { id, type } = req.params;
+    if (type === "Client") {
+        deleteClient(id)
+        .then(() => { res.status(204).json('supprimer')})
+        .catch((err) => res.status(401).send("erreur"))
+    } else if (type==="Produit") {
+        deleteProduct(id)
+        .then(() => { res.status(204).json('supprimer')})
+        .catch((err) => res.status(401).send("erreur"))
+    } else if (type ==="Utilisateur") {
+        deleteUser(id)
+        .then(() => { res.status(204).json('supprimer')})
+        .catch((err) => res.status(401).send("erreur"))
+    }
+}
+
 module.exports = {
     handleAddFunction,
     getlists,
-    updateList
+    updateList,
+    deleteItem
 
 }
